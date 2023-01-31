@@ -32,18 +32,18 @@ public class LinkedList<T> implements List<T> {
         this.size++;
         if (index == 0){
             this.head = newNode;
-            newNode.next = current;
+            newNode.setNext(current);
             return;
         }
         int counter = 1;
         while ((counter) != index){
             counter++;
-            current = current.next;
+            current = current.getNext();
         }
 
-        Node<T> temp = current.next;
-        current.next = newNode;
-        newNode.next = temp;
+        Node<T> temp = current.getNext();
+        current.setNext(newNode);
+        newNode.setNext(temp);
     }
 
     public T getAtIndex(int index){
@@ -53,7 +53,7 @@ public class LinkedList<T> implements List<T> {
         Node<T> current = this.getHead();
         int location = 0;
         while (location != index){
-            current = current.next;
+            current = current.getNext();
             location++;
         }
         return current.getData();
@@ -65,16 +65,16 @@ public class LinkedList<T> implements List<T> {
         }
         Node<T> current = this.getHead();
         if (index == 0){
-            this.head = current.next;
+            this.head = current.getNext();
             return current.getData();
         }
         int location = 0;
         while ((location + 1) != index){
-            current = current.next;
+            current = current.getNext();
             location++;
         }
-        Node<T> toRemove = current.next;
-        current.next = current.next.next;
+        Node<T> toRemove = current.getNext();
+        current.setNext(current.getNext().getNext());
         return toRemove.getData();
     }
 
@@ -84,16 +84,16 @@ public class LinkedList<T> implements List<T> {
         }
         Node<T> current = this.getHead();
         if (current.getData() == data){
-            this.head = current.next;
+            this.head = current.getNext();
             return current.getData();
         }
-        while (current.next != null){
-            if (current.next.getData() == data){
-                Node<T> toRemove = current.next;
-                current.next = current.next.next;
+        while (current.getNext() != null){
+            if (current.getNext().getData() == data){
+                Node<T> toRemove = current.getNext();
+                current.setNext(current.getNext().getNext());
                 return toRemove.getData();
             }
-            current = current.next;
+            current = current.getNext();
         }
         throw new NoSuchElementException("The data is not present in the list.");
     }
@@ -138,7 +138,6 @@ public class LinkedList<T> implements List<T> {
 
 //Todo:  Running: remove_test_correct_index Failed: Got a null next in a Node which was not the last node.
 
-//Todo: Failed: The "data" field has to be private. expected:<[private]> but was:<[]>
 
 //Todo: Need to set the tail
 

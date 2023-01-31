@@ -16,8 +16,6 @@
       <change afterPath="$PROJECT_DIR$/../javaIII/javaIII.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../outcomeinsight/outcomeinsight.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../testenv/testenv.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HW07-linkedList/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW07-linkedList/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../tree-map.js" beforeDir="false" />
