@@ -9,6 +9,7 @@ public class LinkedList<T> implements List<T> {
     public LinkedList(){
         this.head = null;
         this.tail = null;
+        this.size = 0;
     }
 
     public Node<T> getHead(){
@@ -19,42 +20,34 @@ public class LinkedList<T> implements List<T> {
         return this.tail;
     }
 
-    public void addToRear(T data){
-        Node<T> newNode = new Node(data);
-        this.size++;
-        if (this.head == null){
-            this.head = newNode;
-            this.tail = newNode;
-        } else {
-            Node<T> current = this.head;
-            while (current.next != null){
-                current = current.next;
-            }
-            current.next = newNode;
-        }
-
-    }
-
     public void addAtIndex(T data, int index){
         Node<T> newNode = new Node(data, null);
         Node<T> current = this.head;
-        int counter = 1;
-        while ((counter) != index){
-            counter++;
-            current = current.next;
+        if (index < 0 || index > this.size){
+            throw new IllegalArgumentException("Your index is out of the list bounds");
         }
+        if (data == null){
+            throw new IllegalArgumentException("You cannot add null data to the list");
+        }
+        this.size++;
         if (index == 0){
             this.head = newNode;
             newNode.next = current;
             return;
         }
+        int counter = 1;
+        while ((counter) != index){
+            counter++;
+            current = current.next;
+        }
+
         Node<T> temp = current.next;
         current.next = newNode;
         newNode.next = temp;
     }
 
     public T getAtIndex(int index){
-        if (index < 0 || index > this.size){
+        if (index < 0 || index > this.size - 1){
             throw new IllegalArgumentException("Your index is out of the list bounds");
         }
         Node<T> current = this.getHead();
@@ -100,6 +93,7 @@ public class LinkedList<T> implements List<T> {
                 current.next = current.next.next;
                 return toRemove.getData();
             }
+            current = current.next;
         }
         throw new NoSuchElementException("The data is not present in the list.");
     }
@@ -109,7 +103,7 @@ public class LinkedList<T> implements List<T> {
     }
 
     public boolean isEmpty(){
-        return this.head != null;
+        return this.getHead() == null;
     }
 
     public int size(){
@@ -118,11 +112,11 @@ public class LinkedList<T> implements List<T> {
 
     public static void main(String[] args) {
         LinkedList<String> names = new LinkedList<>();
-        names.addToRear("Scott");
-        names.addToRear("Dad");
-        names.addToRear("Mom");
-        names.addToRear("Janelle");
-        names.addToRear("Kayla");
+        names.addAtIndex("Scott", 0);
+        names.addAtIndex("Dad", 0);
+        names.addAtIndex("Mom", 0);
+        names.addAtIndex("Janelle", 0);
+        names.addAtIndex("Kayla", 0);
         names.addAtIndex("Jude", 2);
         String data = names.getAtIndex(4);
         String removeData = names.removeAtIndex(3);
@@ -133,3 +127,18 @@ public class LinkedList<T> implements List<T> {
 
     }
 }
+
+//Todo: Failed: Got a null next in a Node which was not the last node.
+
+//Todo: addAtIndex_test_fields Failed: null
+
+//Todo: Failed: Expected NoSuchElementException removing data-100 in what should be an empty list but got NullPointerException
+
+//Todo: Running: remove_test_correct_variablesb Failed: Tail should not be null removing element at index 0 in list of size 188
+
+//Todo:  Running: remove_test_correct_index Failed: Got a null next in a Node which was not the last node.
+
+//Todo: Failed: The "data" field has to be private. expected:<[private]> but was:<[]>
+
+//Todo: Need to set the tail
+

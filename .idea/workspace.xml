@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0db2a4c5-4144-4d79-b87d-63d4f76bf78a" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../EdX/EdX.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/List.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Java I Course Exam/Java I Course Exam.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/modules.xml" afterDir="false" />
@@ -17,8 +16,8 @@
       <change afterPath="$PROJECT_DIR$/../javaIII/javaIII.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../outcomeinsight/outcomeinsight.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../testenv/testenv.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HW07-linkedList/LinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HW07-linkedList/LinkedList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../tree-map.js" beforeDir="false" />
@@ -106,8 +105,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/LinkedList.java</url>
-          <line>127</line>
-          <option name="timeStamp" value="28" />
+          <line>123</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
