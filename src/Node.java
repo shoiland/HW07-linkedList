@@ -1,5 +1,5 @@
 public class Node<E> {
-    E data;
+    private E data;
     Node<E> next;
 
     public Node(E data, Node<E> next){
@@ -10,16 +10,17 @@ public class Node<E> {
         this(data, null);
     }
 
+    //Setters and Getters
     public void setData(E data){
         this.data = data;
     }
     public E getData(){
         return this.data;
     }
-    public void setNode(Node<E> node){
-        this.next = node;
-    }
-    public Node<E> getNode(){
+    public Node<E> getNext(){
         return this.next;
+    }
+    public void setNext(Node<E> node){
+        this.next = node;
     }
 }
