@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0db2a4c5-4144-4d79-b87d-63d4f76bf78a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../EdX/EdX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java I Course Exam/Java I Course Exam.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/Leetchallenges.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/out/production/Leetchallenges/Challenges.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/src/Challenges.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Leetchallenges/src/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../calculator/calculator.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaIII/javaIII.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../outcomeinsight/outcomeinsight.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../testenv/testenv.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../tree-map.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectId" id="2L67VUCN7DYmWqe9ywk4aL1G6tF" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0db2a4c5-4144-4d79-b87d-63d4f76bf78a" name="Changes" comment="" />
+      <created>1675179704132</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675179704132</updated>
+    </task>
+    <servers />
+  </component>
+</project>
