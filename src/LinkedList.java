@@ -44,6 +44,13 @@ public class LinkedList<T> implements List<T> {
         Node<T> temp = current.getNext();
         current.setNext(newNode);
         newNode.setNext(temp);
+        //Setting tail
+        current = this.head;
+        while (current.getNext() != null){
+            current = current.getNext();
+        }
+        this.tail = current;
+
     }
 
     public T getAtIndex(int index){
@@ -75,6 +82,13 @@ public class LinkedList<T> implements List<T> {
         }
         Node<T> toRemove = current.getNext();
         current.setNext(current.getNext().getNext());
+        //Setting tail
+        current = this.head;
+        while (current.getNext() != null){
+            current = current.getNext();
+        }
+        this.tail = current;
+        this.size--;
         return toRemove.getData();
     }
 
@@ -91,6 +105,13 @@ public class LinkedList<T> implements List<T> {
             if (current.getNext().getData() == data){
                 Node<T> toRemove = current.getNext();
                 current.setNext(current.getNext().getNext());
+                //Setting tail
+                current = this.head;
+                while (current.getNext() != null){
+                    current = current.getNext();
+                }
+                this.tail = current;
+                this.size--;
                 return toRemove.getData();
             }
             current = current.getNext();
@@ -100,6 +121,7 @@ public class LinkedList<T> implements List<T> {
 
     public void clear(){
         this.head = null;
+        this.size = 0;
     }
 
     public boolean isEmpty(){
@@ -111,18 +133,18 @@ public class LinkedList<T> implements List<T> {
     }
 
     public static void main(String[] args) {
-        LinkedList<String> names = new LinkedList<>();
-        names.addAtIndex("Scott", 0);
-        names.addAtIndex("Dad", 0);
-        names.addAtIndex("Mom", 0);
-        names.addAtIndex("Janelle", 0);
-        names.addAtIndex("Kayla", 0);
-        names.addAtIndex("Jude", 2);
-        String data = names.getAtIndex(4);
-        String removeData = names.removeAtIndex(3);
-        System.out.println(removeData);
-        String removedItem = names.remove("Dad");
-        System.out.println("This is what I found in my search:" + removedItem);
+//        LinkedList<String> names = new LinkedList<>();
+//        names.addAtIndex("Scott", 0);
+//        names.addAtIndex("Dad", 0);
+//        names.addAtIndex("Mom", 0);
+//        names.addAtIndex("Janelle", 0);
+//        names.addAtIndex("Kayla", 0);
+//        names.addAtIndex("Jude", 2);
+//        String data = names.getAtIndex(4);
+//        String removeData = names.removeAtIndex(3);
+//        System.out.println(removeData);
+//        String removedItem = names.remove("Dad");
+//        System.out.println("This is what I found in my search:" + removedItem);
 
 
     }
