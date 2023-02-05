@@ -20,6 +20,23 @@ public class LinkedList<T> implements List<T> {
         return this.tail;
     }
 
+    public void removeDuplicates(){
+        this.head = rRemove(this.head);
+    }
+
+    private Node<T> rRemove(Node<T> curr){
+        if (curr == null){
+            return null;
+        }
+        curr.setNext(rRemove(curr.getNext()));
+        if (curr.getNext() != null && curr.getData().equals(curr.getNext().getData())){
+            return curr.getNext();
+        }
+        return curr;
+
+
+    }
+
     public void addAtIndex(T data, int index){
         Node<T> newNode = new Node(data, null);
         Node<T> current = this.head;
@@ -132,19 +149,33 @@ public class LinkedList<T> implements List<T> {
         return this.size;
     }
 
+    public void addToFront(T data){
+        Node<T> node = new Node<>(data);
+        if (this.head == null){
+            this.head = node;
+        }
+        node.setNext(this.head);
+        this.head = node;
+    }
+
     public static void main(String[] args) {
-//        LinkedList<String> names = new LinkedList<>();
-//        names.addAtIndex("Scott", 0);
-//        names.addAtIndex("Dad", 0);
-//        names.addAtIndex("Mom", 0);
-//        names.addAtIndex("Janelle", 0);
-//        names.addAtIndex("Kayla", 0);
-//        names.addAtIndex("Jude", 2);
-//        String data = names.getAtIndex(4);
-//        String removeData = names.removeAtIndex(3);
-//        System.out.println(removeData);
-//        String removedItem = names.remove("Dad");
-//        System.out.println("This is what I found in my search:" + removedItem);
+        LinkedList<String> names = new LinkedList<>();
+        names.addAtIndex("Scott", 0);
+        names.addAtIndex("Dad", 0);
+        names.addAtIndex("Mom", 0);
+        names.addAtIndex("Janelle", 0);
+        names.addAtIndex("Kayla", 0);
+        names.addAtIndex("Jude", 2);
+        names.addToFront("Scott");
+        names.addToFront("Scott");
+        names.addToFront("Scott");
+        names.addToFront("David");
+        names.removeDuplicates();
+        String data = names.getAtIndex(4);
+        String removeData = names.removeAtIndex(3);
+        System.out.println(removeData);
+        String removedItem = names.remove("Dad");
+        System.out.println("This is what I found in my search:" + removedItem);
 
 
     }
